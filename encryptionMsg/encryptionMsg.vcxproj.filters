@@ -27,6 +27,12 @@
     <ClCompile Include="codec.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="requestCodec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="respondCodec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RequestMsg.pb.h">
@@ -36,6 +42,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="requestCodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="respondCodec.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
