@@ -10,7 +10,7 @@ RespondCodec::RespondCodec(string encstr)
 	this->initMessage(encstr);
 }
 
-RespondCodec::RespondCodec(RespondMsg* info)
+RespondCodec::RespondCodec(RespondInfo* info)
 {
 	this->initMessage(info);
 }
@@ -21,12 +21,12 @@ void RespondCodec::initMessage(string encstr)
 	this->m_encStr = encstr;
 }
 
-void RespondCodec::initMessage(RespondMsg* info)
+void RespondCodec::initMessage(RespondInfo* info)
 {
 	this->m_msg.set_rv(info->rv);
-	this->m_msg.set_seckeyid(info->seckeyid);
-	this->m_msg.set_clientid(info->clientid);
-	this->m_msg.set_serverid(info->serverid);
+	this->m_msg.set_seckeyid(info->seckeyId);
+	this->m_msg.set_clientid(info->clientId);
+	this->m_msg.set_serverid(info->serverId);
 	this->m_msg.set_data(info->data);
 }
 

@@ -1,18 +1,28 @@
 #pragma once
-#include <string>
+#include <iostream>
 #include "codec.h"
-#include "RequestMsg.pb.h"
 #include "RespondMsg.pb.h"
+using namespace std;
+struct RespondInfo
+{
+	int rv;
+	int seckeyId;
+	string clientId;
+	string serverId;
+	string data;
+};
 class RespondCodec : public Codec
 {
-	string m_encStr;
-	RespondMsg m_msg;
+public:
 	RespondCodec();
 	RespondCodec(string encstr);
-	RespondCodec(RespondMsg *info);
+	RespondCodec(RespondInfo* info);
 	void initMessage(string encstr);
-	void initMessage(RespondMsg* info);
+	void initMessage(RespondInfo* info);
 	string encodeMsg();
 	void* decodeMsg();
 	~RespondCodec();
+private:
+	string m_encStr;
+	RespondMsg m_msg;
 };

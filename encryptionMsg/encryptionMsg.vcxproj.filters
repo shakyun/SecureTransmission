@@ -33,6 +33,15 @@
     <ClCompile Include="respondCodec.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="codecFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="requestFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="respondFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RequestMsg.pb.h">
@@ -48,6 +57,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="respondCodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codecFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="requestFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="respondFactory.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,7 +10,7 @@ RequestCodec::RequestCodec(string encstr)
 	this->initMessage(encstr);
 }
 
-RequestCodec::RequestCodec(RequestMsg* info)
+RequestCodec::RequestCodec(RequestInfo* info)
 {
 	this->initMessage(info);
 }
@@ -20,7 +20,7 @@ void RequestCodec::initMessage(string encstr)
 	this->m_encStr = encstr;
 }
 
-void RequestCodec::initMessage(RequestMsg* info)
+void RequestCodec::initMessage(RequestInfo* info)
 {
 	this->m_msg.set_cmdtype(info->cmdtype);
 	this->m_msg.set_clientid(info->clientid);

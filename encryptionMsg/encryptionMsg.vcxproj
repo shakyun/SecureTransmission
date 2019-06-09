@@ -129,17 +129,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="codec.cpp" />
+    <ClCompile Include="codecFactory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="requestCodec.cpp" />
+    <ClCompile Include="requestFactory.cpp" />
     <ClCompile Include="RequestMsg.pb.cc" />
     <ClCompile Include="respondCodec.cpp" />
+    <ClCompile Include="respondFactory.cpp" />
     <ClCompile Include="RespondMsg.pb.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="codec.h" />
+    <ClInclude Include="codecFactory.h" />
     <ClInclude Include="requestCodec.h" />
+    <ClInclude Include="requestFactory.h" />
     <ClInclude Include="RequestMsg.pb.h" />
     <ClInclude Include="respondCodec.h" />
+    <ClInclude Include="respondFactory.h" />
     <ClInclude Include="RespondMsg.pb.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
