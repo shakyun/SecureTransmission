@@ -10,9 +10,9 @@ public:
 	RequestMsg m_msg;
 	RequestCodec();
 	RequestCodec(string encstr);
-	RequestCodec(int cmd, string clientID, string serverID, string sign, string data);
+	RequestCodec(RequestMsg* info);
 	void initMessage(string encstr);
-	void initMessage(int cmd, string clientID, string serverID, string sign, string data);
+	void initMessage(RequestMsg* info);
 	string encodeMsg();
 	void* decodeMsg();
 	~RequestCodec();

@@ -7,28 +7,39 @@ RequestCodec::RequestCodec()
 
 RequestCodec::RequestCodec(string encstr)
 {
+	this->initMessage(encstr);
 }
 
-RequestCodec::RequestCodec(int cmd, string clientID, string serverID, string sign, string data)
+RequestCodec::RequestCodec(RequestMsg* info)
 {
+	this->initMessage(info);
 }
 
 void RequestCodec::initMessage(string encstr)
 {
+	this->m_encStr = encstr;
 }
 
-void RequestCodec::initMessage(int cmd, string clientID, string serverID, string sign, string data)
+void RequestCodec::initMessage(RequestMsg* info)
 {
+	this->m_msg.set_cmdtype(info->cmdtype);
+	this->m_msg.set_clientid(info->clientid);
+	this->m_msg.set_serverid(info->serverid);
+	this->m_msg.set_sign(info->sign);
+	this->m_msg.set_data(info->data);
 }
 
 string RequestCodec::encodeMsg()
 {
-	return string();
+	string output;
+	m_msg.SerializeToString(&output);
+	return output;
 }
 
 void* RequestCodec::decodeMsg()
 {
-	return nullptr;
+	m_msg.ParseFromString(m_encStr);
+	return &m_msg;
 }
 
 RequestCodec::~RequestCodec()

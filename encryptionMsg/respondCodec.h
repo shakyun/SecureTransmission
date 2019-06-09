@@ -9,9 +9,9 @@ class RespondCodec : public Codec
 	RespondMsg m_msg;
 	RespondCodec();
 	RespondCodec(string encstr);
-	RespondCodec(int status, int seckeyID, string clientID, string serverID, string data);
+	RespondCodec(RespondMsg *info);
 	void initMessage(string encstr);
-	void initMessage(int status, int seckeyID, string clientID, string serverID, string data);
+	void initMessage(RespondMsg* info);
 	string encodeMsg();
 	void* decodeMsg();
 	~RespondCodec();
